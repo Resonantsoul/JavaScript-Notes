@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+    <script>
+        // 数组（Array）：就是一组数据的集合 存储在单个变量下的多个数据
+        // 利用 new 关键字创建数组
+        var arr = new Array(); // 创建一个空的数组
+        // 利用数组字面量创建数组[]
+        var arr01 = []; // 创建一个空的数组
+        var arr02 = [1,2,'666',true,];
+        // 数据里面的数据用逗号分隔
+        // 其中的数据称为数组元素
+        console.log(arr02);
+        // 用数组下标获取特定元素
+        console.log(arr02[2]); 
+        var arr03 = ['666','777','888'];
+        console.log(arr03[3]); // underfined 没有这个下标的数组元素 
+
+        // 数组遍历
+        var arr04 = ['111','222','333','444','555'];
+        for (var i = 0;i <= arr04.length - 1;i ++ ) {
+            console.log(arr04[i]);
+        }
+
+        // 求数组最大值 循环比较赋值给max
+        var arr05 = [2,3,4,55,34,7,21,65];
+        var max = arr05[0]; // 开始时第一个元素和第二个元素进行比较 少一轮循环 提高效率
+        for (var j = 1;j <= arr05.length - 1;j++) {
+            if (arr05[j] > max) {
+                max = arr05[j];
+            }
+        }
+        console.log(max);
+
+        // 新增数组元素
+        var arr06 = ['red','green','blue'];
+        console.log(arr06);
+        arr06.length = 5;
+        console.log(arr06);
+        console.log(arr06[3]);
+        console.log(arr06[4]);
+        // 新增数组元素 修改下标 
+        arr06[3] = 'yellow';
+        arr06[4] = 'black';
+        console.log(arr06);
+        arr06 = '666';
+        console.log(arr06);
+        /* 下标元素中没有元素可以添加新元素 如果有元素添加元素则是替换掉旧的元素
+           如果直接替换数组名 则数组中的所有元素都被替换
+        */
+       
+        // 筛选数组元素
+        // 方法一
+        var arr07 = [2,3,7,4,9,45,23,56,34,23];
+        var newArr = [];
+        var a = 0;
+        for (var b = 0;b <= arr07.length - 1;b++ ) {
+            if (arr07[b] > 10) {
+                newArr[a] = arr07[b];
+                a++;
+            }
+        }
+        console.log(newArr);
+
+        // 方法二
+        var arr08 = [2,3,7,4,9,45,23,56,34,23];
+        var newArr = [];
+        for (var c = 0;c <= arr08.length - 1;c++) {
+            if (arr08[c] > 10) {
+                newArr[newArr.length] = arr08[c];
+            }
+        }
+        console.log(newArr);
+
+        // 反转数组
+        var arr09 = [1,2,3,4,5];
+        var newArr01 = [];
+        for (var d = arr09.length - 1 ;d >= 0;d--) {
+            newArr01[newArr01.length] = arr09[d]
+        }
+        console.log(newArr01);
+
+        // 冒泡排序
+        var arr10 = [7,4,8,2,1];
+        for (var e = 0;e <= arr10.length - 1;e++) {
+            for (var g = 0;g <= arr10.length - e - 1;g++) {
+                // 内部交换两个变量的值
+                if (arr10[g] > arr10[g + 1]) {
+                    var temp = arr10[g];  
+                    arr10[g] = arr10[g + 1];
+                    arr10[g + 1] = temp;
+                }
+            }
+        }
+        console.log(arr10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
