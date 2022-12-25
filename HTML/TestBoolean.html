@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布尔型</title>
+    <script>
+        var flag = true; // 1
+        var flag1 = false; // 0
+        console.log(flag + 1); // true 参与加法运算 = 0
+        console.log(flag1 + 1); // flase 参与加法运算 = 1
+        // 如果一个变量声明未赋值 则为underfined 未定义数据类型
+        var str;
+        console.log(str);
+        var variable = undefined;
+        console.log(variable + 'pink');
+        console.log(variable + 1); // NaN underfined 和数字相加 最后结果是NaN
+        // null 空值
+        var space = null;
+        console.log(space + 'pink'); // nullpink
+        console.log(space + 1); // 1
+
+        // typeof 检测数据类型
+        var num  =10;
+        console.log(typeof num); // number
+        var str = 'pink';
+        console.log(typeof str); // String
+        var flag = false;
+        console.log(typeof flag); // Boolean
+        var vari = undefined;
+        console.log(typeof vari); // underfined
+        var timer = null;
+        console.log(typeof null); // object
+        // prompt取过来的值是 字符类型
+        var age = prompt('请输入您的年龄')
+        console.log(age);
+        console.log(typeof age);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

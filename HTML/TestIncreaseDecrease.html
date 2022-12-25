@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>递增和递减</title>
+    <script>
+        // 让一个变量自加1 num = num + 1 (繁琐)
+        var num = 1; // ++num
+        num = num + 1; 
+        console.log(num);
+        // 前置递增运算符 ++ 写在变量的前面
+        var age = 10;
+        ++age; // 类似于age = age + 1;
+        console.log(age);
+        // 先加一 后返回值
+        var p = 10;
+        console.log(++p + 10);
+
+        var num1 = 10;
+        num++; num = num + 1;
+        // 前置自增和后置自增如果单独使用 效果一样
+        // 后置自增 口诀：先返回原值 后自加1
+        var age1 = 10;
+        console.log(age1++ + 10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
