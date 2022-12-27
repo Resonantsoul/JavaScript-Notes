@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域</title>
+    <script>
+        // JavaScript作用域：就是代码名字（变量）在某个范围内起作用和效果 目的是为了提高程序的可靠性
+        // js的作用域（es6）之前：全局作用域 局部作用域
+        // 全局作用域：整个script标签 或是单个js文件
+        var num = 10;
+        var num = 30;
+        console.log(num);
+        // 同一作用域下 两个同一变量会冲突 执行代码会取最近的一个（就近原则）
+
+        // 局部作用域（函数作用域）在函数内部就是局部作用域 这个代码的名字只在函数内部有效果和作用
+        function fn() {
+            // 局部作用域
+            var num = 100;
+            console.log(num);
+        }
+        fn();
+
+        // 变量的作用域：根据作用域的不同 变量分为全局变量和局部变量
+        // 全局变量：在全局作用域下的变量
+        // 注意：如果在函数内部没有声明 直接赋值的变量也叫做全局变量
+        var num1 = 10;
+        console.log(num);
+
+        function fn1() {
+            console.log(num1);
+        }
+        fn1();
+
+        // 局部变量 在局部变量下的变量 
+        // 注意：函数的形参也可以看作是局部变量
+        function fn2(aru) {
+            var num2 = 20; // 局部变量 只能在函数内部使用
+            num3 = 30;
+
+        }
+        fn2();
+        console.log(num3);
+
+        // 从执行资源上来判断全局变量和局部变量
+        // 全局变量 只有在浏览器关闭的时候才会销毁 比较占内存资源
+        // 局部变量 当我们程序执行完毕就会销毁 比较节约内存资源
+
+        // js中没有块级作用域 js作用域：全局作用域 局部作用域 现阶段js没有块级作用域
+        // js在es6 的时候新增块级作用域
+        // 块级作用域{} if{} for {}
+        /*
+           if(xx) {
+            int num = 10;
+           }
+           外面的是不能调用num的
+        */
+        if(3 > 5) {
+            var num4 = 10;
+        }
+        console.log(num4);
+
+        // 作用域链: 内部函数访问外部函数的变量 采取的是链式查找的方式来决定取那个值 称为作用链（就近原则）
+        var num5 = 10;
+        function fn3() { // 外部函数
+            var num5 = 20;
+
+            function fn4() { // 内部函数
+                console.log(num5);
+            }
+            fn4();
+        }
+        fn3();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
