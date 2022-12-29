@@ -6,7 +6,9 @@
 
 ### 更新日志：
 
-- 2022.12.27 学习函数，作用域，预解析 更新文件：**TestFunction.html，Testarguments.html，TestPreparsing.html，TestScope.html**
+- 2022.12.29 学习对象和构造函数 更新文件：**TestObject.html，TestConstructedFunction.html**
+
+- 2022.12.27 学习函数，作用域和预解析 更新文件：**TestFunction.html，Testarguments.html，TestPreparsing.html，TestScope.html**
 
 - 2022.12.26 学习函数 更新文件：**TestFunction.html**
 
