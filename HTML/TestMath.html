@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <script>
+        // Math数学对象 不是一个构造函数 不需要 new 来调用 直接使用属性和方法
+        console.log(Math.PI);
+        console.log(Math.max(1,99,3)); // 99
+        console.log(Math.max(-1,-10)); // -1
+        console.log(Math.max(1,2,'nb')); // NaN
+        console.log(Math.max()); // -Infinity
+        console.log(Math.min(2,4)); // 2
+
+        // 封装自己的数学对象
+        var myMath = {
+            PI: 3.1415926,
+            max: function() {
+                var max = arguments[0];
+                for(var i = 1;i <= arguments.length;i++) {
+                    if(arguments[i] > max) {
+                        max = arguments[i];
+                    } 
+                }
+                return max; 
+            },
+            min: function() {
+            var min = arguments[0];
+                for(var i = 1;i <= arguments.length;i++) {
+                    if(arguments[i] < min) {
+                        min = arguments[i];
+                    } 
+                }
+                return min; 
+            }
+        }
+        console.log(myMath.PI);
+        console.log(myMath.max(1,5,9));
+        console.log(myMath.min(1,5,9));
+    
+        // 绝对值方法
+        console.log(Math.abs(1)); // 1
+        console.log(Math.abs(-1)); // 1
+        console.log(Math.abs('-1')); // 1
+        console.log(Math.abs('nb')); // MaM
+
+        // 三个取整方法
+        // Math.floor() 向下取整 
+        console.log(Math.floor(1.1)); // 1
+        console.log(Math.floor(1.9)); // 1
+
+        // Math.ceil() 向上取整
+        console.log(Math.ceil(1.1)); // 2
+        console.log(Math.ceil(1.9)); // 2
+
+        // Math.round() 四舍五入 .5特殊 它往大的取
+        console.log(Math.round(1.1)); // 1
+        console.log(Math.round(1.9)); // 2
+        console.log(Math.round(-1.1)); // -1
+        console.log(Math.round(-1.5)); // -1
+        console.log(Math.round(-1.6)); // -2
+
+        // Math.random() 对象随机数方法 返回一个随机小数 范围：0 <= x < 1;
+        console.log(Math.random());
+        // 随机整数
+        function getRandom(min,max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        console.log(getRandom(1,10));
+
+        // 随机点名
+        var arr = ['张三','李四','王五'];
+        console.log(arr[0]);
+        console.log(arr[getRandom(0,arr.length - 1)]); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

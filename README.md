@@ -6,6 +6,8 @@
 
 ### 更新日志：
 
+- 2022.12.30 学习内置对象，Math，Date 更新文件：**TestMath.html,TestDate.html**
+
 - 2022.12.29 学习对象和构造函数 更新文件：**TestObject.html，TestConstructedFunction.html**
 
 - 2022.12.27 学习函数，作用域和预解析 更新文件：**TestFunction.html，Testarguments.html，TestPreparsing.html，TestScope.html**
