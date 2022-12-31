@@ -28,6 +28,97 @@
         var age = 18;
         // 变量通过和字符串相连的方式实现的
         console.log('pink' + age + '岁');
+
+        // 基本包装盒类型
+        var str4 = 'fanrunyi';
+        console.log(str4.length);
+        // 对象才有 属性和方法 复杂数据类型才有 属性和方法
+        // 简单数据类型为什么会有length 属性？
+        // 基本包装类型：就是把简单数据类型 包装成为 复杂数据类型
+
+        // 把简单数据类型包装为复杂数据类型
+        var temp = new String('fanrunyi');
+        // 把临时变量的值给str4
+        str4 = temp;
+        // 销毁这个临时变量
+        temp = null;
+
+        // 字符串的不可变性
+        var str5 = 'FRY';
+        str5 = 'CHR';
+        console.log(str5);
+        // 因为字符串的不可变所以不要大量的拼接字符串
+
+        var str6 = '';
+        for(var i = 1;i <= 100;i++) {
+            str6 += i;
+        } 
+        console.log(str6);
+
+        // 字符串对象 根据字符返回位置 str.indexOf('要查找的字符',起始的位置) （默认从0开始）
+        var str7 = '639816';
+        console.log(str7.indexOf('6'));
+        console.log(str7.indexOf('6',2)); // 从索引号2开始往后找 
+
+        // 根据位置返回字符
+        // charAt(index) 
+        var str8 = 'andy';
+        console.log(str8.charAt(3));
+
+        // charCodeAt(index) 返回相应索引号的字符ASCII值 目的：判断用户按下哪个键
+        console.log(str8.charCodeAt(0)); // 97
+
+        // str[index] H5新增
+        console.log(str8[0]);
+
+        // 判断一个字符串 'abcoefoxyozzopp'中出现次数最多的字符 并统计其次数
+        var str9 = 'abcoefoxyozzopp';
+        var o = {};
+        for(var j = 0;j <= str9.length - 1;j++) {
+            var chars = str9.charAt(j);
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+
+        // 遍历对象
+        var max = 0;
+        var ch = '';
+        for(var k in o) {
+            if(o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log(ch);
+
+        // 字符串连接方法
+        var str10 = '1';
+        console.log(str10.concat('2'));
+
+        //substr('截取的起始位置','截取几个字符');
+        var str11 = '12345';
+        console.log(str11.substr(2,3)); 
+
+        // 替换字符 replace('被替换文字','替换的字符') 重复字符时 只会替换第一个字符
+        var str12 = '1234';
+        console.log(str12.replace('4','5'));
+
+        // 'abcoefoxyozzopp' 把其中所有的o替换为*
+
+        var str12 = 'abcoefoxyozzopp';
+        while(str12.indexOf('o') !== -1) {
+            str12 = str12.replace('o','*');
+        }
+        console.log(str12);
+
+        // 字符串转换为数组 split('分隔符')
+        var str13 = '3,2,4';
+        console.log(str13.split(','));
     </script>
 </head>
 <body>
