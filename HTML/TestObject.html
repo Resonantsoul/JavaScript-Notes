@@ -59,10 +59,26 @@
         console.log(obj2.uname);
         console.log(obj2.age);
         console.log(obj2.sex);
-        // 我们是利用 等号= 赋值的方法 添加对象的属性和方法
+        // 我们是利用 等号 = 赋值的方法 添加对象的属性和方法
         // 每个方法和属性之间用 分号结束
-        
 
+        // 利用构造函数创建对象
+        function Person(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.sayHi2 = function() {
+        alert('我的名字叫：' + this.name + '，年龄：' + this.age + '，性别：' + this.sex);
+            }
+        }
+        var bigbai = new Person('大白', 100, '男');
+        var smallbai = new Person('小白', 21, '男');
+        console.log(bigbai.name);
+        console.log(smallbai.name);
+        // 通过变量名调用对象中的方法
+        bigbai.sayHi2();
+        smallbai.sayHi2();
+        
         // 遍历对象
         var obj3 = {
             name1: '666',
