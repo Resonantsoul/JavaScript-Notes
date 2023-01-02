@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByld获取元素</title>
+</head>
+<body>
+    <div id="time">2023.1.2</div>
+</body>
+<script>
+    // 因为我们文档页面从上到下加载，所以先得有标签 script写道标签下面
+    // get 获得 element 元素 by 通过 驼峰命名法
+    // 参数 id是大小写敏感的字符串
+    // 返回的是一个元素对象
+    var time =  document.getElementById('time')
+    console.log(time);
+    console.log(typeof time);
+    // console.dir 打印返回的元素对象 更好的查看里面的属性和方法
+    console.dir(time);
+</script>
+</html>

@@ -6,6 +6,8 @@
 
 ### 更新日志：
 
+- 2023.1.2 学习获取元素和事件基础 更新文件：**TestgetElementByld.html，TestgetElementsByClassName.html，TestgetElementsByTagName.html，TestIncident.html**
+
 - 2023.1.1 复习，整理JS基础笔记 更新文件：**TestObject.html**
 
 - 2022.12.31 学习数组，字符串，数据类型 更新文件：**TestArrays.html，TestDataType.html，TestString.html**

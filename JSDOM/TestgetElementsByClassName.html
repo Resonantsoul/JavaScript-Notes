@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="box">盒子3</div>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+    </ol>
+</body>
+<script>
+    // getElementsByClassName 根据类名获得某些元素集合
+    var boxs = document.getElementsByClassName('box');
+    console.log(boxs); 
+    // querySelector 返回指定选择器的第一个元素对象 符号 id:# class:.
+    var firstBox = document.querySelector('.box')
+    console.log(firstBox);
+    var secondbox = document.querySelector('#box')
+    console.log(secondbox);
+    var li = document.querySelector('li')
+    console.log(li);
+
+    // querySelectorAll() 返回的是指定选择器的所有元素对象
+    var allBox = document.querySelectorAll('.box')
+    console.log(allBox);
+    var li1 = document.querySelectorAll('li')
+    console.log(li1);
+
+    // 获取body元素 document.body;
+    var bodyEle = document.body;
+    console.log(bodyEle);
+    console.dir(bodyEle);
+    // 获取html元素 document.documentElement;
+    var htmlEle = document.documentElement;
+    console.log(htmlEle);
+    console.dir(htmlEle);
+</script>
+</html>
