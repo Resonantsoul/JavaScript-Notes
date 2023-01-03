@@ -6,6 +6,8 @@
 
 ### 更新日志：
 
+- 2023.1.3 学习操作元素 更新文件：**TestIncident.html，TestOperate.html，Test01.html，Test02.html，close.png，images1.JPG，images2.JPG，open.png，tao.png**
+
 - 2023.1.2 学习获取元素和事件基础 更新文件：**TestgetElementByld.html，TestgetElementsByClassName.html，TestgetElementsByTagName.html，TestIncident.html**
 
 - 2023.1.1 复习，整理JS基础笔记 更新文件：**TestObject.html**

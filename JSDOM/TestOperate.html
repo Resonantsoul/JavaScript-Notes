@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素</title>
+    <style>
+        #d1 {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button>显示当前系统时间</button>
+    <div>某个时间</div>
+    <p>123</p>
+    <p id="p">
+        321
+        <span>666</span>
+    </p>
+    <button id="1">bz1</button>
+    <button id="2">bz2</button>
+    <br />
+    <img src ="../Picture/images1.JPG" alt="" title="bz1">
+    <br />
+    <button id="3">按钮</button>
+    <input type= "text" value="开始">
+    <br />
+    <div id="d1"></div>
+
+</body>
+<script>
+    //当我们点击按钮 div里面的文字会发生变化
+    // 获取元素
+    var btn = document.querySelector('button');
+    var div = document.querySelector('div');
+    // 注册事件
+    btn.onclick = function () {
+        div.innerHTML = getTime();
+    }
+
+
+    function getTime () {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var dates = date.getDay();
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var day = date.getDay();
+        return '今天是：' + year + '年' + month + '月' + dates + '日' + arr[day]; 
+    }
+
+    // 元素可以不用添加事件
+    var p = document.querySelector('p');
+    p.innerHTML = getTime();
+
+    //innerTest 和 innerHTML 的区别
+    // innerTest 不识别html标签 非标准 去除空格和换行
+    var div1 = document.querySelector('div');
+    // div.innerText = '<strong>时间</strong>';
+    // innerHTML 识别html标签 W3C标准 保留空格和换行
+    div.innerHTML = '<strong>时间</strong>';
+    // 这两个属性是可读写的 可以获取元素里面的内容
+    var p1 = document.querySelector('#p')
+    console.log(p1.innerText);
+    console.log(p1.innerHTML);
+
+    // 修改元素属性
+    // 获取元素
+    var bz1 = document.getElementById('1');
+    var bz2 = document.getElementById('2');
+    var img = document.querySelector('img');
+    // 注册事件
+    bz1.onclick = function () {
+        img.src = '../Picture/images1.JPG';
+        img.title = 'bz1';
+    }
+    bz2.onclick = function () {
+        img.src = '../Picture/images2.JPG';
+        img.title = 'bz2';
+    } 
+
+    // 获取元素
+    var btn1 = document.getElementById('3');
+    var input = document.querySelector('input');
+    //注册事件 处理程序
+    btn1.onclick = function () {
+        // input.innerHtml 这个只生效在普通盒子 比如div标签里面的内容
+        // 表单里面的值 文字内容是通过 value 来修改的
+        input.value = '结束';
+        // 如果想要某个表单被禁用 不能再点击 disabled 我们想要这个按钮 button 禁用
+        // btn.disabled = true;
+        this.disabled = true;
+        // this指向的是事件函数的调用者btn
+        
+    }
+
+    // 修改样式属性
+    // 获取元素
+    var div2 = document.getElementById('d1');
+    div2.onclick = function () {
+        // div.style里面的属性 采取驼峰命名法
+        this.style.backgroundColor = 'red';
+        this.style.width = '400px';
+    }
+</script>
+</html>
