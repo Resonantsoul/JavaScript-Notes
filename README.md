@@ -6,6 +6,10 @@
 
 ### 更新日志：
 
+- 2023.1.5 学习案例，排他思想，自定义属性 更新文件：
+
+  **Test05.html，Test06.html，Test07.html，Test08.html，Test09.html，TestAlgorithm.html，TestDIYAttribute.html，1.jpj，2.jpj，3.jpj，4.jpj，*mess.png，right.png，wrong.png***
+
 - 2023.1.4 学习案例，className 更新文件：**Test03.html，Test04.html，TestClassName.html，sprite.png**
 
 - 2023.1.3 学习操作元素 更新文件：**TestIncident.html，TestOperate.html，Test01.html，Test02.html，close.png，images1.JPG，images2.JPG，open.png，tao.png**
