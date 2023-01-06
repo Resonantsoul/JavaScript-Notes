@@ -6,6 +6,8 @@
 
 ### 更新日志：
 
+- 2023.1.6 学习案例，节点 更新文件：**TestNode.html，Test10.html，Test11.html，Test12.html**
+
 - 2023.1.5 学习案例，排他思想，自定义属性 更新文件：
 
   **Test05.html，Test06.html，Test07.html，Test08.html，Test09.html，TestAlgorithm.html，TestDIYAttribute.html，1.jpj，2.jpj，3.jpj，4.jpj，*mess.png，right.png，wrong.png***

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+        
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+
+    <div class="demo">
+        <div class="box">
+            <span class="erweima">x</span>
+        </div>
+    </div>
+
+    <div class="d1">div</div>
+    <span>span</span>
+
+    <ul class="u1">
+        <li>123</li>
+    </ul>
+
+    <button>删除</button>
+    <ul class="u2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+<script>
+    // 父节点 parentNode
+    var erweima = document.querySelector('.erweima');
+    // var box = document.querySelector('.box');
+    // 得到的是离元素最近的父级节点 如果找不到父节点就返回null
+    console.log(erweima.parentNode);
+    // DOM 提供的方法（API）获取
+    var ul = document.querySelector('ul');
+    var lis = ul.querySelector('li');
+    // 子节点 childNodes 所有的子节点 包含 元素节点 文本节点等等
+    console.log(ul.childNodes);
+    console.log(ul.childNodes[0].nodeType);
+    console.log(ul.childNodes[1].nodeType);
+    // children 获取所有的子元素节点 也是我们实际开发中常用的
+    console.log(ul.children);
+
+    var ol = document.querySelector('ol');
+    // firstChild 第一个子节点 不管是文本节点还是元素节点
+    console.log(ol.firstChild);
+    console.log(ol.lastChild);
+    // firstElementChild 返回第一个元素节点 ie9以上支持
+    console.log(ol.firstElementChild);
+    console.log(ol.lastElementChild);
+    // 实际开发的写法 既没有兼容性问题又返回第一个元素
+    console.log(ol.children[0]);
+    console.log(ol.children[ol.children.length - 1]);
+
+    // 兄弟节点
+    var div1 = document.querySelector('.d1');
+    // nextSibling 下一个兄弟节点 包含元素节点 或者 文本节点等等
+    console.log(div1.nextSibling);
+    console.log(div1.previousSibling);
+    // nextElementSibling 得到下一个兄弟元素节点
+    console.log(div1.nextElementSibling);
+    console.log(div1.previousElementSibling);
+    
+    // 创建节点元素节点
+    var li1 = document.createElement('li');
+    // 添加节点 node.appendChild(child) node 父级 child 是子级 后面追加元素 类似于数组中的push
+    var ul1 = document.querySelector('.u1');
+    ul1.appendChild(li1);
+    // 添加节点 node.insertBefore(child,指定元素);
+    var li2 = document.createElement('li');
+    ul1.insertBefore(li2,ul1.children[0]);
+    // 我们想要页面添加一个新的元素：1.创建元素 2.添加元素
+
+    // 删除节点
+    var ul2 = document.querySelector('.u2');
+    var btn = document.querySelector('button');
+    // 删除元素 node.removeChild(child)
+    // 点击按钮依次删除里面的子级
+    btn.onclick = function () {
+        ul2.removeChild(ul2.children[0]);
+        if (ul2.children.length == 0) {
+            this.disabled = true;
+        } 
+    }
+</script>
+</html>
