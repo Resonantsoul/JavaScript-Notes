@@ -42,6 +42,12 @@
         <li>2</li>
         <li>3</li>
     </ul>
+
+    <ul class="u3">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
 </body>
 <script>
     // 父节点 parentNode
@@ -100,5 +106,13 @@
             this.disabled = true;
         } 
     }
+
+    // 复制节点
+    var ul =document.querySelector('.u3');
+    // node.cloneNode() 括号为空或者里面是false 浅拷贝 只复制标签不复制里面的内容
+    // node.cloneNode(true); 括号为true 深拷贝 复制标签里面的内容
+    var lili = ul.children[0].cloneNode(true);
+    ul.appendChild(lili);
+    
 </script>
 </html>
